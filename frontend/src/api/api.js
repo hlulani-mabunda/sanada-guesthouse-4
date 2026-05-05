@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:500/api"
+  baseURL: "https://sadana-guesthouse-3-backend.onrender.com/api"
 });
 
 // Attach token automatically
