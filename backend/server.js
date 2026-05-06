@@ -10,7 +10,8 @@ require("dotenv").config();
 const app = express();
 
 // Middleware
-app.use(cors());
+const allowedOrigin = process.env.CLIENT_URL;
+app.use(cors(allowedOrigin ? { origin: allowedOrigin } : undefined));
 app.use(express.json());
 
 // Routes
