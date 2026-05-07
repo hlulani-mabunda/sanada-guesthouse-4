@@ -1,7 +1,7 @@
 const Booking = require("../models/Booking");
 const House = require("../models/House");
 
-// ✅ CREATE BOOKING
+// CREATE BOOKING
 exports.createBooking = async (req, res) => {
   try {
     const {
@@ -49,7 +49,7 @@ exports.createBooking = async (req, res) => {
 
 
 
-// ✅ RELEASE HOUSE (CHECK-OUT)
+// RELEASE HOUSE (CHECK-OUT)
 exports.releaseHouse = async (req, res) => {
   try {
     const { houseNumber } = req.body;
@@ -72,7 +72,7 @@ exports.releaseHouse = async (req, res) => {
 
 
 
-// ✅ GET ALL BOOKINGS (MANAGER VIEW)
+// GET ALL BOOKINGS (MANAGER VIEW)
 exports.getBookings = async (req, res) => {
   try {
     const bookings = await Booking.find()
